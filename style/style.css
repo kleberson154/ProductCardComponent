@@ -1,5 +1,139 @@
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+}
+
+.container {
+  display: flex;
+  height: 30rem;
+  width: 40rem;
+  border-radius: 15px;
+}
+
+.image {
+  background-image: url('../images/image-product-desktop.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 15px 0 0 15px;
+}
+
+.content {
+  background-color: var(--White);
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  align-content: space-between;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 0 15px 15px 0;
+  padding: 2rem 2rem 3rem 2rem;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--DarkGrayishBlue);
+  letter-spacing: 0.5rem;
+}
+
+.title {
+  font-family: 'Fraunces', serif;
+  color: var(--VeryDarkBlue);
+}
+
+.descript {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--DarkGrayishBlue);
+  font-size: 0.9rem;
+  padding-right: 1.5rem;
+}
+
+.price {
+  font-family: 'Fraunces', serif;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pricePrincipal {
+  color: var(--DarkCyan);
+}
+
+.priceDescount {
+  color: var(--DarkGrayishBlue);
+}
+
+.btnBuy {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--DarkCyan);
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.attribution {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--VeryDarkBlue);
+  position: relative;
+  top: 5rem;
+}
+
+.attribution a {
+  color: var(--DarkCyan);
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    height: 60rem;
+    justify-content: flex-start;
+  }
+
+  .container {
+    display: block;
+    width: 80%;
+    margin-top: 2rem;
+  }
+
+  .image {
+    background-image: url('../images/image-product-mobile.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 21.8rem;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .content {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .attribution {
+    top: 24rem;
+  }
 }
